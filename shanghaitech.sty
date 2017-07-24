@@ -2,48 +2,53 @@
 \subtitle {--From my perspective}  
 
 \newcommand\makeTitlePage{
+	% titlepage
 	\begin{frame}  
 	\titlepage  
 	\end{frame}
+
+	% logo
 	\logo{\includegraphics[height=1.5cm]{img/logo.png}}
+
+	% overview
+	\section*{Overview}
+	\frame {
+    \frametitle{\secname}
+    \tableofcontents[hideallsubsections]}
 }
 
-\newcommand{\authorname}{Zhixin Piao}
-\newcommand{\authoremail}{piaozhx6@gmail.com}
+% author message
+\newcommand{\authorname}{}
+\newcommand{\setAuthorName}[1]{\renewcommand{\authorname}{#1}}
+
+\newcommand{\authoremail}{}
+\newcommand{\setAuthorEmail}[1]{\renewcommand{\authoremail}{#1}}
 
 \newcommand{\originAuthor}{\author}
-%\renewcommand{\author}
-
 \author[\authorname]{\texorpdfstring{\authorname\newline\url{\authoremail}}{\authorname}}
 
-\date[ShanghaiTech University]{\today}  
-\institute[\authoremail]{ShanghaiTech University}
+% institude message
+\newcommand{\institudename}{}
+\newcommand{\setInstitudeName}[1]{\renewcommand{\institudename}{#1}}
+\institute[\authoremail]{\institudename}
 
+% date message
+\date[ShanghaiTech University]{\today} %default date
+\newcommand{\setDate}[1]{\date[\institudename]{#1}}
+
+% no navigation
 \setbeamertemplate{navigation symbols}{}
+
+% set main color
 \xdefinecolor{shanghaitech}{rgb}{0.651, 0, 0.011}
 \xdefinecolor{slightgray}{rgb}{.925490196, .925490196, .925490196}
 
 
 \setbeamercolor{frametitle}{bg=white,fg=shanghaitech}
-% \setbeamercolor{frametitle}{bg=shanghaitech,fg=white}
 \setbeamercolor{title}{fg=white,bg=shanghaitech}
 
 \setbeamercolor{section number projected}{bg=shanghaitech,fg=white}
 \setbeamercolor{subsection number projected}{bg=shanghaitech,fg=white}
-% \setbeamercolor{section in toc}{fg=gray}
-% \setbeamercolor{subsection in toc}{fg=shanghaitech}
-
-% \defbeamertemplate{section in toc}{square unnumbered}{%
-%    \leavevmode\leftskip=1.75ex%
-%    \llap{\textcolor{shanghaitech}{\vrule width2.25ex
-%      height1.85ex depth.4ex}}%
-%    \kern1.5ex\inserttocsection\par}
-
-% \defbeamertemplate{subsection in toc}{square unnumbered}{%
-%    \leavevmode\leftskip=4ex%
-%    \llap{\textcolor{shanghaitech}{\vrule width1.125ex
-%      height0.925ex depth0.4ex}}%
-%    \kern1.5ex\inserttocsection\par}
 
 \setbeamertemplate{section in toc}[square]
 \setbeamertemplate{subsection in toc}[square]
@@ -51,5 +56,35 @@
 \setbeamercolor{block title}{bg=shanghaitech, fg=white}
 \setbeamercolor{block body}{bg=slightgray}
 
-\setbeamertemplate{itemize item}{\color{yellow}$\blacksquare$}
+\setbeamertemplate{itemize item}{\color{shanghaitech}$\blacksquare$}
 \setbeamertemplate{itemize subitem}{\color{orange}$\blacktriangleright$}
+
+% add beigin section title box
+\AtBeginSection[]{
+	\begin{frame}
+	\vfill
+	\centering
+	\begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+	\usebeamerfont{title}\insertsectionhead\par%
+	\end{beamercolorbox}
+	\vfill
+	\end{frame}
+}
+
+% add beigin section title box
+% \AtBeginSubsection[] {
+% 	\frame{
+% 	\frametitle{Outline}
+% 	\tableofcontents[current,currentsubsection]
+% 	}
+% }
+
+
+
+
+
+
+
+
+
+
