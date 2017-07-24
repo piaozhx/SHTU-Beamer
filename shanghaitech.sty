@@ -1,0 +1,55 @@
+\title[Android的发展以及安全现状]{Android的发展以及安全现状}  
+\subtitle {--From my perspective}  
+
+\newcommand\makeTitlePage{
+	\begin{frame}  
+	\titlepage  
+	\end{frame}
+	\logo{\includegraphics[height=1.5cm]{img/logo.png}}
+}
+
+\newcommand{\authorname}{Zhixin Piao}
+\newcommand{\authoremail}{piaozhx6@gmail.com}
+
+\newcommand{\originAuthor}{\author}
+%\renewcommand{\author}
+
+\author[\authorname]{\texorpdfstring{\authorname\newline\url{\authoremail}}{\authorname}}
+
+\date[ShanghaiTech University]{\today}  
+\institute[\authoremail]{ShanghaiTech University}
+
+\setbeamertemplate{navigation symbols}{}
+\xdefinecolor{shanghaitech}{rgb}{0.651, 0, 0.011}
+\xdefinecolor{slightgray}{rgb}{.925490196, .925490196, .925490196}
+
+
+\setbeamercolor{frametitle}{bg=white,fg=shanghaitech}
+% \setbeamercolor{frametitle}{bg=shanghaitech,fg=white}
+\setbeamercolor{title}{fg=white,bg=shanghaitech}
+
+\setbeamercolor{section number projected}{bg=shanghaitech,fg=white}
+\setbeamercolor{subsection number projected}{bg=shanghaitech,fg=white}
+% \setbeamercolor{section in toc}{fg=gray}
+% \setbeamercolor{subsection in toc}{fg=shanghaitech}
+
+% \defbeamertemplate{section in toc}{square unnumbered}{%
+%    \leavevmode\leftskip=1.75ex%
+%    \llap{\textcolor{shanghaitech}{\vrule width2.25ex
+%      height1.85ex depth.4ex}}%
+%    \kern1.5ex\inserttocsection\par}
+
+% \defbeamertemplate{subsection in toc}{square unnumbered}{%
+%    \leavevmode\leftskip=4ex%
+%    \llap{\textcolor{shanghaitech}{\vrule width1.125ex
+%      height0.925ex depth0.4ex}}%
+%    \kern1.5ex\inserttocsection\par}
+
+\setbeamertemplate{section in toc}[square]
+\setbeamertemplate{subsection in toc}[square]
+
+\setbeamercolor{block title}{bg=shanghaitech, fg=white}
+\setbeamercolor{block body}{bg=slightgray}
+
+\setbeamertemplate{itemize item}{\color{yellow}$\blacksquare$}
+\setbeamertemplate{itemize subitem}{\color{orange}$\blacktriangleright$}
